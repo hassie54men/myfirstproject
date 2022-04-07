@@ -148,6 +148,7 @@ color: #FFFFFF;
 }
 .class li:hover:nth-child(6){
 	color: brown;
+	background: url(../img/icons/li.svg) left no-repeat;
 }
 button:hover:nth-child(2){
 	background: rgba(212, 89, 82, 0.8);
