@@ -1,0 +1,254 @@
+
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
+.first-lorem{
+	margin: 20px 20px 20px 20px;
+    width: 450px;
+
+}
+.second-lorem{
+	margin: 10px 1px 1px 100px
+}
+.wrapper {
+	min-height: 100%;
+	display: grid;
+	grid-template: minmax(100px, auto) 1fr minmax(70px, auto) / 1fr;
+	grid-template-areas: 
+	"header"
+	"main"
+	"footer";
+	background: #373461;
+}
+.header {
+	background-color: #D45952;
+	grid-area: header;
+	padding: 15px;
+	display: grid;
+	grid-template: 1fr / 1fr minmax(auto, 300px) minmax(auto, 1100px) 1fr ;
+	align-items: center;
+	
+}
+.header__logo {
+	grid-column: 2/3;
+}
+.header__menu {
+	grid-column: 3/4;
+	
+}
+.header__list {
+	display: grid;
+	grid-auto-flow: column;
+	justify-items: end;
+	
+}
+.header__link {
+	color: white;
+}
+.header__burger {
+}
+.main {
+	padding: 30px 15px;
+}
+@media (min-width: 992px){
+	.main{
+	display: grid;
+	grid-template: 1fr / 1fr minmax(auto, 300px) minmax(auto, 1100px) 1fr ;
+	grid-area: main;
+	}
+
+}
+.sidebar {
+	grid-column: 2/3;
+	background-color: rgba(128, 128, 128, 1);
+	padding: 15px;
+	
+	
+}
+.sidebar__menu {
+	
+	
+}
+.sidebar__list {
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+text-decoration-line: underline;
+
+}
+.sidebar__list li{
+	padding-bottom: 20px;
+	
+}
+.sidebar__link {
+	color: white;
+}
+.content {
+	grid-column: 3/4;
+	padding: 0px 0px 0px 20px;
+}
+.content__title {
+	font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 150%;
+color: #FFFFFF;
+margin-bottom: 30px;
+}
+.content__gallery {
+	margin-bottom: 40px;
+}
+.gallery {
+}
+.gallery__title {
+	font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 150%;
+color: #FFFFFF;
+margin-bottom: 40px;
+
+}
+.gallery__items {
+	display: grid;
+	gap: 20px	;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) ;
+}
+.gallery__item {
+	position: relative;
+	padding: 0px 0px 85% 0px;
+}
+.gallery__item img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.gallery__item_big {
+	grid-column: span 2;
+	grid-row: span 2;
+}
+.content__products {
+}
+.products {
+}
+.products__title {
+	font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 150%;
+color: #FFFFFF;
+margin-bottom: 40px;
+
+}
+.products__items {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) ;
+	column-gap: 20px;
+	row-gap: 20px	;
+
+}
+.product__item {
+	display: grid;
+	grid-auto-flow: row;
+	grid-template: auto 1fr minmax(40px, auto) / 1fr;
+}
+.products__image {
+	position: relative;
+	padding: 0px 0px 90% 0px;
+	margin-bottom: 20px;
+}
+.products__image img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+
+
+}
+.products__name {
+	font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+color: #FFFFFF;
+margin-bottom: 26px;
+}
+.products__button {
+	font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+color: #FFFFFF;
+padding: 5px 20px;
+gap: 10px;
+background: #D45952;
+justify-self: start;
+}
+.footer {
+	background-color: #ccff00;
+	display: grid;
+	grid-area: footer;
+	grid-template: 1fr / 1fr minmax(auto, 300px) minmax(auto, 1100px) 1fr ;
+	align-items: center;
+	color: #FFFFFF;
+	
+	
+}
+.footer__list {
+grid-column: 3/4;
+display: grid;
+grid-auto-flow: column;
+justify-items: end;
+}
+.footer__link{
+	color: #FFFFFF;
+	font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+color: #FFFFFF;
+
+}
+
